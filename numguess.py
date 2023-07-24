@@ -2,7 +2,10 @@
 
 import random #random是一個模組 #載入模組
 
-r = random.randint(1,100)
+setup_start = int(input("請輸入開始值："))
+setup_end = int(input("請輸入結束值："))
+
+r = random.randint(setup_start,setup_end)
 count = 0
 while True:
     count = count + 1 #也可以寫成 count += 1
