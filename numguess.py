@@ -3,13 +3,16 @@
 import random #random是一個模組 #載入模組
 
 r = random.randint(1,100)
+count = 0
 while True:
-    guess = int(input("請輸入數字"))
+    count = count + 1 #也可以寫成 count += 1
+    guess = int(input("請輸入數字："))
     if guess == r:
-        print("恭喜你答對了")
+        print("恭喜你答對了,共用了",count,"次機會")
         break
     elif guess != r:
         if guess <= r:
             print("比",guess,"大")
         elif guess >= r:
             print("比",guess,"小")
+    print("這是你猜的第",count,"次")
